@@ -10,12 +10,27 @@ Ensure you have the following tools installed:
 
 Installation:
 On Ubuntu/Debian-based systems:
-'''
+```
 sudo apt update
 sudo apt install curl jq grep
-'''
+```
 
 ### Step 2: Define the List of APIs and PII to Look For
 Create a file called ``` apis.txt ``` that lists the APIs you want to check. Each line should contain the URL of one API.
 
+### Step 3: Running the Script
+1. Make the script executable:
+   ```
+   chmod +x privacy_risk_assessment.sh
+   ```
+3. Run the script.
+   ```
+   ./privacy_risk_assessment.sh
+   ```
 
+## Explanation of the Script:
+API File: The script reads from apis.txt to get the list of APIs to query.
+PII Patterns: We define a list of common PII (e.g., emails, names, IPs) to search for in the API response.
+Querying the API: The script uses curl to query each API and retrieves the JSON response.
+Checking for PII: The script searches for the PII patterns using grep. If PII is found, it's logged in the report file privacy_risk_report.txt.
+Report Generation: All the findings are written to a report file for further review.
