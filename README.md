@@ -14,3 +14,8 @@ On Ubuntu/Debian-based systems:
 sudo apt update
 sudo apt install curl jq grep
 '''
+
+### Step 2: Define the List of APIs and PII to Look For
+Create a file called ``` apis.txt ``` that lists the APIs you want to check. Each line should contain the URL of one API.
+
+
