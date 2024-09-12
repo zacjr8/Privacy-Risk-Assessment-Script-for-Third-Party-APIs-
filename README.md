@@ -29,8 +29,8 @@ Create a file called ``` apis.txt ``` that lists the APIs you want to check. Eac
    ```
 
 ## Explanation of the Script:
-API File: The script reads from apis.txt to get the list of APIs to query.
-PII Patterns: We define a list of common PII (e.g., emails, names, IPs) to search for in the API response.
-Querying the API: The script uses curl to query each API and retrieves the JSON response.
-Checking for PII: The script searches for the PII patterns using grep. If PII is found, it's logged in the report file privacy_risk_report.txt.
-Report Generation: All the findings are written to a report file for further review.
+1. **API File**: The script reads from ```apis.txt``` to get the list of APIs to query.
+2. **PII Patterns**: We define a list of common PII (e.g., emails, names, IPs) to search for in the API response.
+3. **Querying the API**: The script uses ```curl``` to query each API and retrieves the JSON response.
+4. **Checking for PII**: The script searches for the PII patterns using ```grep```. If PII is found, it's logged in the report file ```privacy_risk_report.txt```.
+5. **Report Generation**: All the findings are written to a report file for further review.
