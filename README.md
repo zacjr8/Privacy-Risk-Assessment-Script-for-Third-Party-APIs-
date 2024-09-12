@@ -10,6 +10,7 @@ Ensure you have the following tools installed:
 
 Installation:
 On Ubuntu/Debian-based systems:
-'''sudo apt update
+'''
+sudo apt update
 sudo apt install curl jq grep
 '''
